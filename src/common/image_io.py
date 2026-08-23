@@ -42,7 +42,7 @@ def ycbcr_to_rgb(ycbcr):
 
 if __name__ == "__main__":
     # Sanity check: round-trip should be near-lossless
-    img = load_image_rgb("data/kodak/kodim01.png")
+    img = load_image_rgb("/Users/sevilkhojasteh/Documents/to-learn/projects/learned-compression/data/kodak/kodim01.png")
     print(f"Loaded shape: {img.shape}, dtype: {img.dtype}")
 
     ycbcr = rgb_to_ycbcr(img)
