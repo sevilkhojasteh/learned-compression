@@ -15,19 +15,19 @@ def save_image_rgb(arr, path):
     Image.fromarray(arr).save(path)
 
 
-def rgb_to_ycbcr(rgb):
-    """
-    Convert RGB (uint8, 0–255) to YCbCr (float, Y∈[0,255], Cb,Cr∈[-128,128]).
-    JPEG uses YCbCr because the human eye is much more sensitive to luminance (Y)
-    than chrominance (Cb, Cr), so we can compress the color channels harder.
-    """
-    rgb = rgb.astype(np.float64)
-    R, G, B = rgb[..., 0], rgb[..., 1], rgb[..., 2]
+# def rgb_to_ycbcr(rgb):
+#     """
+#     Convert RGB (uint8, 0–255) to YCbCr (float, Y∈[0,255], Cb,Cr∈[-128,128]).
+#     JPEG uses YCbCr because the human eye is much more sensitive to luminance (Y)
+#     than chrominance (Cb, Cr), so we can compress the color channels harder.
+#     """
+#     rgb = rgb.astype(np.float64)
+#     R, G, B = rgb[..., 0], rgb[..., 1], rgb[..., 2]
 
-    Y  =  0.299 * R + 0.587 * G + 0.114 * B
-    Cb = -0.168736 * R - 0.331264 * G + 0.5 * B
-    Cr =  0.5 * R - 0.418688 * G - 0.081312 * B
-    return np.stack([Y, Cb, Cr], axis=-1)
+#     Y  =  0.299 * R + 0.587 * G + 0.114 * B
+#     Cb = -0.168736 * R - 0.331264 * G + 0.5 * B
+#     Cr =  0.5 * R - 0.418688 * G - 0.081312 * B
+#     return np.stack([Y, Cb, Cr], axis=-1)
 
 
 def ycbcr_to_rgb(ycbcr):
