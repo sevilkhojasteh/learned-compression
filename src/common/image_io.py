@@ -30,14 +30,14 @@ def rgb_to_ycbcr(rgb):
     return np.stack([Y, Cb, Cr], axis=-1)
 
 
-# def ycbcr_to_rgb(ycbcr):
-#     """Convert YCbCr back to RGB uint8."""
-#     Y, Cb, Cr = ycbcr[..., 0], ycbcr[..., 1], ycbcr[..., 2]
+def ycbcr_to_rgb(ycbcr):
+    """Convert YCbCr back to RGB uint8."""
+    Y, Cb, Cr = ycbcr[..., 0], ycbcr[..., 1], ycbcr[..., 2]
 
-#     R = Y + 1.402 * Cr
-#     G = Y - 0.344136 * Cb - 0.714136 * Cr
-#     B = Y + 1.772 * Cb
-#     return np.clip(np.stack([R, G, B], axis=-1), 0, 255).astype(np.uint8)
+    R = Y + 1.402 * Cr
+    G = Y - 0.344136 * Cb - 0.714136 * Cr
+    B = Y + 1.772 * Cb
+    return np.clip(np.stack([R, G, B], axis=-1), 0, 255).astype(np.uint8)
 
 
 if __name__ == "__main__":
