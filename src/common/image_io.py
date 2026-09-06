@@ -9,10 +9,10 @@ def load_image_rgb(path):
     return np.array(img)
 
 
-def save_image_rgb(arr, path):
-    """Save an RGB uint8 array to file."""
-    arr = np.clip(arr, 0, 255).astype(np.uint8)
-    Image.fromarray(arr).save(path)
+# def save_image_rgb(arr, path):
+#     """Save an RGB uint8 array to file."""
+#     arr = np.clip(arr, 0, 255).astype(np.uint8)
+#     Image.fromarray(arr).save(path)
 
 
 def rgb_to_ycbcr(rgb):
