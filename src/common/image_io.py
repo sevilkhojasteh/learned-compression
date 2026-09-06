@@ -3,10 +3,10 @@ import numpy as np
 from PIL import Image
 
 
-def load_image_rgb(path):
-    """Load an image as an RGB uint8 array of shape (H, W, 3)."""
-    img = Image.open(path).convert("RGB")
-    return np.array(img)
+# def load_image_rgb(path):
+#     """Load an image as an RGB uint8 array of shape (H, W, 3)."""
+#     img = Image.open(path).convert("RGB")
+#     return np.array(img)
 
 
 def save_image_rgb(arr, path):
