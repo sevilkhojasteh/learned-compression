@@ -1,6 +1,6 @@
-# """Image I/O and colorspace conversion utilities."""
-# import numpy as np
-# from PIL import Image
+"""Image I/O and colorspace conversion utilities."""
+import numpy as np
+from PIL import Image
 
 
 def load_image_rgb(path):
