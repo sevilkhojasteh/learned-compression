@@ -8,11 +8,11 @@
 #     return peak_signal_noise_ratio(original, reconstructed, data_range=255)
 
 
-# def ssim(original, reconstructed):
-#     """Structural Similarity Index. Higher = better. Range: [0, 1]."""
-#     return structural_similarity(
-#         original, reconstructed, channel_axis=-1, data_range=255
-#     )
+def ssim(original, reconstructed):
+    """Structural Similarity Index. Higher = better. Range: [0, 1]."""
+    return structural_similarity(
+        original, reconstructed, channel_axis=-1, data_range=255
+    )
 
 
 def bpp(compressed_bits, height, width):
