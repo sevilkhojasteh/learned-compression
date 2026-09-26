@@ -15,9 +15,9 @@
 #     )
 
 
-# def bpp(compressed_bits, height, width):
-#     """Bits per pixel — how much space the compressed image uses."""
-#     return compressed_bits / (height * width)
+def bpp(compressed_bits, height, width):
+    """Bits per pixel — how much space the compressed image uses."""
+    return compressed_bits / (height * width)
 
 
 if __name__ == "__main__":
