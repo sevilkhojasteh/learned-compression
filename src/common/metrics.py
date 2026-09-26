@@ -1,6 +1,6 @@
-"""Compression quality metrics: PSNR, MS-SSIM, bpp."""
-import numpy as np
-from skimage.metrics import peak_signal_noise_ratio, structural_similarity
+# """Compression quality metrics: PSNR, MS-SSIM, bpp."""
+# import numpy as np
+# from skimage.metrics import peak_signal_noise_ratio, structural_similarity
 
 
 def psnr(original, reconstructed):
