@@ -3,9 +3,9 @@
 # from skimage.metrics import peak_signal_noise_ratio, structural_similarity
 
 
-def psnr(original, reconstructed):
-    """Peak Signal-to-Noise Ratio in dB. Higher = better. Typical range: 25–45 dB."""
-    return peak_signal_noise_ratio(original, reconstructed, data_range=255)
+# def psnr(original, reconstructed):
+#     """Peak Signal-to-Noise Ratio in dB. Higher = better. Typical range: 25–45 dB."""
+#     return peak_signal_noise_ratio(original, reconstructed, data_range=255)
 
 
 def ssim(original, reconstructed):
